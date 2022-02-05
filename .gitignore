@@ -1,0 +1,8 @@
+archives/
+xml/
+
+# Python virtual environment
+venv/
+
+# Environment variables
+.env

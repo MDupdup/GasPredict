@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build: 
+      context: ./
+    stdin_open: true
+    tty: true
+    user: "${UID}:${GID}"
+    container_name: pyappcont
+    ports:
+      - '3000:3000'
+    volumes:
+      - ../:/code/app:rw
+      - ~/.ssh:/.ssh
+    networks:
+      - main-network
+
+networks:
+  main-network
+  

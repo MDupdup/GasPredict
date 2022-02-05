@@ -1,0 +1,27 @@
+{
+    "name": "Gaspredict",
+    "dockerComposeFile": [
+		"docker-compose.yml"
+	],
+    "service": "app",
+    "workspaceFolder": "/code/app",
+	
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "eamodio.gitlens",
+        "miguelsolorio.fluent-icons",
+        "esbenp.prettier-vscode",
+        "VisualStudioExptTeam.vscodeintellicode",
+		"gruntfuggly.todo-tree"
+    ],
+
+	"postCreateCommand": "pip3 install --user -r requirements-dev.txt",
+
+	"remoteUser": "vscode",
+
+	"features": {
+		"git": "latest",
+		"sshd": "latest"
+	}
+}
