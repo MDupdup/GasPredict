@@ -3,7 +3,9 @@ from fastapi import FastAPI
 
 from src.core.utils.xmlutils import XmlUtils
 from src.services.mongoclient import DbClient
+from dotenv import load_dotenv
 
+load_dotenv()
 
 log = logging.getLogger("uvicorn")
 
@@ -37,7 +39,6 @@ async def root():
 @app.on_event("startup")
 async def startup_event():
     log.info("Starting up...")
-
 
 # Action on stop API
 @app.on_event("shutdown")
